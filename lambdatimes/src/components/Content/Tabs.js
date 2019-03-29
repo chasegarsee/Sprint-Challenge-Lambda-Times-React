@@ -1,5 +1,7 @@
 import React from "react";
 import Tab from "./Tab";
+import PropTypes from "prop-types";
+
 const Tabs = props => {
   return (
     <div className="tabs">
@@ -17,6 +19,12 @@ const Tabs = props => {
       </div>
     </div>
   );
+};
+
+Tabs.propTypes = {
+  tabs: PropTypes.arrayOf(PropTypes.string),
+  selectedTab: PropTypes.string,
+  selectTabHander: PropTypes.func
 };
 
 export default Tabs;
